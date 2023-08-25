@@ -6,10 +6,10 @@
 - Should a country having a lower life expectancy value(<65) increase its healthcare expenditure in order to improve its average lifespan? -
 - How does Infant and Adult mortality rates affect life expectancy? -
 - Does Life Expectancy has positive or negative correlation with eating habits, lifestyle, exercise, smoking, drinking alcohol etc.-
-What is the impact of schooling on the lifespan of humans?
-Does Life Expectancy have positive or negative relationship with drinking alcohol?
-Do densely populated countries tend to have lower life expectancy?
-What is the impact of Immunization coverage on life Expectancy?
+- What is the impact of schooling on the lifespan of humans?
+- Does Life Expectancy have positive or negative relationship with drinking alcohol?
+- Do densely populated countries tend to have lower life expectancy?
+- What is the impact of Immunization coverage on life Expectancy?
 ## The data
 The data used was provided by the WHO and contains data on the following features:
    - Country -
@@ -35,7 +35,8 @@ The data used was provided by the WHO and contains data on the following feature
    - Income Compostion Of Resources (percentage between 0 and 1) 
    - Schooling (years)
  ## Exploratory data analysis findings
-   ### Trends over time
+   ### These findings are referenced from the Jupyter Notebook written in Python
+   #### Trends over time
 
    On average, bmi has only gone up between 2000 and 2015.
   
@@ -49,7 +50,9 @@ The data used was provided by the WHO and contains data on the following feature
    years do coincidentally coincide with active moments of conflict during the Iraq and Afganistan wars. However, more analysis is needed to be sure.
    
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Average%20deaths%20under%205%20per%201000.png)
+  
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Average%20infant%20deaths%20per%201000.png)
+  
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Average%20young%20adult%20deaths%20by%20year.png)
 
    Regardless, life expectancy has been consistently increasing between 2000 and 2015
@@ -99,6 +102,8 @@ The data used was provided by the WHO and contains data on the following feature
 
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20years%20in%20school.png)
 
-
+  So in conclusion, upon completion of the exploratory data anlysis, it would appear that the strongest indicators of life expectancy are bmi, polio
+  vaccinations, adult mortality, and years of schooling. 
+  
      
      

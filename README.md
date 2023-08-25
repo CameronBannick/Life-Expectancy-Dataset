@@ -60,7 +60,7 @@ The data used was provided by the WHO and contains data on the following feature
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Avergae%20life%20expectancy%20by%20year.png)
 
 
-   ### Relationships between data
+   #### Relationships between data
 
    The visual below shows there is a "positive/moderate" realtionship between life expectancy and bmi; meaning as bmi increases, life expectancy will as well.
    
@@ -104,6 +104,10 @@ The data used was provided by the WHO and contains data on the following feature
 
   So in conclusion, upon completion of the exploratory data anlysis, it would appear that the strongest indicators of life expectancy are bmi, polio
   vaccinations, adult mortality, and years of schooling. 
-  
+
+### These findings are referenced from the Excel file 
+  #### Analysis of potential 
+  After seeing what parts of the data looked like they were related, a number was found to quantify the relationship. This confirmed the relationship between 
+  adult mortality and life expectancy as well as between bmi and life expectancy. However, a negative relationship 
      
      

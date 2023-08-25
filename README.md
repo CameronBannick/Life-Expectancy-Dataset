@@ -76,11 +76,29 @@ The data used was provided by the WHO and contains data on the following feature
    
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Polio%20vaccine%20%25.png)
 
+   It also appears adult mortality (15-60) has a moderate negative relationship, meaning the more cases of adult mortality results in a lower life expectancy.
+   
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20adult%20mortatilty.png)
-   
 
+   But, it does not appear deaths under five or infant mortality have a realtionship to life expectancy 
+  
+   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20deaths%20under%20age%205.png)
+  
+   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20infant%20deaths.png)
    
+   How does population density play in? Well belowe we can see that there isn't a relationship between population desity and life expectancy.
+
+   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20population.png)
+
+   Does the percentage spent on Healthcare play a role? According to the plot below there doesnt appear to be much of a relationship.
+
+   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expenditure%20over%20%25%20spent%20on%20health.png)
    
+   The strongest relationship found was a little surprising, the strongest postive relationship is between years of schooling and life expectancy. Meaning the 
+   more years of schooling one has the higher the life expectancy.
+
+   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20years%20in%20school.png)
+
 
      
      

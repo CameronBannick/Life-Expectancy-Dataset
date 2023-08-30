@@ -106,8 +106,21 @@ The data used was provided by the WHO and contains data on the following feature
   vaccinations, adult mortality, and years of schooling. 
 
 ### These findings are referenced from the Excel file 
-  #### Analysis of potential 
+  #### Analysis of potential relationships
   After seeing what parts of the data looked like they were related, a number was found to quantify the relationship. This confirmed the relationship between 
-  adult mortality and life expectancy as well as between bmi and life expectancy. However, a negative relationship 
+  adult mortality and life expectancy as well as between bmi and life expectancy. However, a negative relationship a moderate negative relationship was found 
+  between HIV/AIDS cases and life expectancy; meaning that more HIV/AIDS cases seems to indicate a lower life expectancy. 
+
+  The polio vaccine and diphteria vaccine both appear to have a moderate positive reltionship. This means higher rates of vaccinations seem to indicate higher l 
+  life expectancy.
+
+  GDP and percentage expenditure are on the cusp of being in the "moderate relationship zone", but less so than the former mentioned.
+
+  The strongest relationship found in the dataset is still years of schooling, indicating education is potentially the strongest indicator of a long life 
+  expectacncy. You could make the argument that it is more schooling typically comes with more resources such as medical and capitol. However, the relationships 
+  with those data features were a lot smaller.
+
+  
+  
      
      

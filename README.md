@@ -1,20 +1,11 @@
-# Life Expectancy Dataset
- ## Context 
-"Although there have been lot of studies undertaken in the past on factors affecting life expectancy considering demographic variables, income composition and mortality rates. It was found that affect of immunization and human development index was not taken into account in the past. Also, some of the past research was done considering multiple linear regression based on data set of one year for all the countries. Hence, this gives motivation to resolve both the factors stated previously by formulating a regression model based on mixed effects model and multiple linear regression while considering data from a period of 2000 to 2015 for all the countries. Important immunization like Hepatitis B, Polio and Diphtheria will also be considered. In a nutshell, this study will focus on immunization factors, mortality factors, economic factors, social factors and other health related factors as well. Since the observations this dataset are based on different countries, it will be easier for a country to determine the predicting factor which is contributing to lower value of life expectancy. This will help in suggesting a country which area should be given importance in order to efficiently improve the life expectancy of its population." -WHO
- ## Questions
-- Does various predicting factors which has been chosen initially really affect the Life expectancy? What are the predicting variables actually affecting the life expectancy? -
-- Should a country having a lower life expectancy value(<65) increase its healthcare expenditure in order to improve its average lifespan? -
-- How does Infant and Adult mortality rates affect life expectancy? -
-- Does Life Expectancy has positive or negative correlation with eating habits, lifestyle, exercise, smoking, drinking alcohol etc.-
-- What is the impact of schooling on the lifespan of humans?
-- Does Life Expectancy have positive or negative relationship with drinking alcohol?
-- Do densely populated countries tend to have lower life expectancy?
-- What is the impact of Immunization coverage on life Expectancy?
-## The data
+# Life Expectancy Report
+ ## Introduction
+    As the human era continues advancements in medicine keep improving the quality of life for countries around the world. In the pursuit to ensure these advancements are made available to everyone, the question then becomes what factors contribute most to the life expectancy in the modern era. The goal of this project were to see which features in our data had the strongest relationship with life expectancy. 
+ ## The data
 The data used was provided by the WHO and contains data on the following features:
    - Country -
    - Year (Between 2000 and 2015) 
-   - Status (Developed or developing) 
+   - Status (Developed or developing/1 or 0) 
    - Life Expectancy 
    - Adult Mortality (deaths between 15 and 60) 
    - Infant Deaths (per 1000 population) 
@@ -34,9 +25,11 @@ The data used was provided by the WHO and contains data on the following feature
    - Thinness 5-9 years 
    - Income Compostion Of Resources (percentage between 0 and 1) 
    - Schooling (years)
+
+ For data cleaning, all that was done was standardized the type format and imputed the missing data. The average was used for numerical data types and mode for categorical.
+
  ## Exploratory data analysis findings
-   ### These findings are referenced from the Jupyter Notebook written in Python
-   #### Trends over time
+   ### Trends over time
 
    On average, bmi has only gone up between 2000 and 2015.
   
@@ -60,65 +53,81 @@ The data used was provided by the WHO and contains data on the following feature
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Avergae%20life%20expectancy%20by%20year.png)
 
 
-   #### Relationships between data
+   ### Relationships for life expectancy 
 
-   The visual below shows there is a "positive/moderate" realtionship between life expectancy and bmi; meaning as bmi increases, life expectancy will as well.
-   
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20BMI.png)
-
-    Our next visual shows a weak realtionship between gdp and life expectancy, implying access to more resources doesn't indicate a longer life.
    
-   !{image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20GDP.png)
-
-   The hepatitis-b vaccine also appears to have a weak relationship with life expectancy. All of the data points far from the redline appear to "outliers", 
-   meaning they are not representative to the rest of the population. 
-
-   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Hepatitis%20B%20Vaccine%20%25.png) 
-
-   However, the polio vaccine seems to have a "positive/moderate to strong relationship" meaning the more people are vaccinated the larger the life expectancy.
+   BMI has a moderately strong realtionship with life expectancy as seen above, the higher the BMI the higher the life expectancy. This appears to be a little counter intuitive because you'd expect a negative relationship with a lower BMI making a higher life expectancy. When calculating the correlation coefficient (which you can think of as "percent correlated") we get .56, so just a little over 50% correlated. 
    
+ ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20GDP.png).  
+
+   Our next visual shows a weak realtionship between gdp and life expectancy, when calculating the correlation coeefficient (from now on called CC) you get 43%. So while there is a relationship, it doesn't appear to be a strong one. 
+   
+  ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Hepatitis%20B%20Vaccine%20%25.png)  
+
+   The hepatitis-b vaccine appears to have a weak relationship with life expectancy. All of the data points far from the redline appear to "outliers", 
+   meaning they are not representative to the rest of the population. The CC came out to 20%.
+
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Polio%20vaccine%20%25.png)
 
-   It also appears adult mortality (15-60) has a moderate negative relationship, meaning the more cases of adult mortality results in a lower life expectancy.
+   However, the polio vaccine seems to have a "positive/moderate to strong relationship" meaning the more people are vaccinated the larger the life expectancy. The CC calculated was 46%
+   
    
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20adult%20mortatilty.png)
 
-   But, it does not appear deaths under five or infant mortality have a realtionship to life expectancy 
-  
-   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20deaths%20under%20age%205.png)
-  
-   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20infant%20deaths.png)
+   It appears adult mortality (15-60) has a strong negative relationship, meaning the more cases of adult mortality results in a lower life expectancy. The CC calculated was 70% in the negative direction. 
    
-   How does population density play in? Well belowe we can see that there isn't a relationship between population desity and life expectancy.
+![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20deaths%20under%20age%205.png)
 
+The relationship between under 5 deaths and life expectancy is very weak as you can say is above. CC calculated at 20% in the negative direction.
+  
+ ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20infant%20deaths.png)
+  
+  Similarly, infant deaths seem to have a very weak relationship with life expectancy at 20% in the negative direction.
+   
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20population.png)
 
-   Does the percentage spent on Healthcare play a role? According to the plot below there doesnt appear to be much of a relationship.
+  Population doesn't appear to be a strong factor, seeing how the trend line goes flat across. The CC calcualtion was only 20%.
 
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expenditure%20over%20%25%20spent%20on%20health.png)
-   
-   The strongest relationship found was a little surprising, the strongest postive relationship is between years of schooling and life expectancy. Meaning the 
-   more years of schooling one has the higher the life expectancy.
+
+   FOr the chart above, we filtered all countries with a life expectancy under 65 and see if their was a relationship between that and percentage spent on healthcare. As shown, there doesn't appear to be a strong relationship with a CC of 1%.
+
+  ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/Life%20expectancy%20over%20alcohol%20consumption%20(in%20liters).png?)
+
+  Alcohol has a weak relationship to life expectancy with only a 39% correlation
 
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20years%20in%20school.png)
+   
+   Schooling appears to have a very strong relationship to life expectancy. You can clearly see on the graph about more schooling means a higher life expectancy, the cc calculatede was 70%.
 
-  So in conclusion, upon completion of the exploratory data anlysis, it would appear that the strongest indicators of life expectancy are bmi, polio
-  vaccinations, adult mortality, and years of schooling. 
+   We did run a statistical analysis on all these features where we split two samples from the life expectancy median and did find a statistical signifance in the samples on all these features. However, their were some limitatons that we will expand upon later.
 
-### These findings are referenced from the Excel file 
-  #### Analysis of potential relationships
-  After seeing what parts of the data looked like they were related, a number was found to quantify the relationship. This confirmed the relationship between 
-  adult mortality and life expectancy as well as between bmi and life expectancy. However, a negative relationship a moderate negative relationship was found 
-  between HIV/AIDS cases and life expectancy; meaning that more HIV/AIDS cases seems to indicate a lower life expectancy. 
+  ## Modeling 
 
-  The polio vaccine and diphteria vaccine both appear to have a moderate positive reltionship. This means higher rates of vaccinations seem to indicate higher l 
-  life expectancy.
+  After playing with a few different types of models, the Random Forest Regressor. This is a type of Descision Tree model that is good with numerical data. Think if you ask a bunch of friends for advice on a given descision and you took all of their advice to create a refined choice in your descision. This is how the random forest works. We split our data into a standard train test split and used the default parameters, this got us a model that can predit life expectancy withing about 1-3 years of error. When tuning the parameters, the error increased so we opted to leave it alone.
 
-  GDP and percentage expenditure are on the cusp of being in the "moderate relationship zone", but less so than the former mentioned.
+  ## Results and interpretations
 
-  The strongest relationship found in the dataset is still years of schooling, indicating education is potentially the strongest indicator of a long life 
-  expectacncy. You could make the argument that it is more schooling typically comes with more resources such as medical and capitol. However, the relationships 
-  with those data features were a lot smaller.
+  The two strongest factors given in regards to life expectany are schooling and adult mortality. However, I am not sure if schooling is directly assosciated with life expectancy. It could also be possible with more schooling avaliable means more public works meaning higher standards of santitation which could also be contributing. However, with adult mortaility, it does appear there are enough young deaths that are effecting the average life expectancy. 
+
+  As far as moderate relationships, we have BMI, GDP, and the polio vaccine, however these three can also be connected. Notice earlier how higher BMI's were associated with higher life expectancy. Higher BMI could also mean higher access to food and doctors (polio vaccine).
+
+  ## Limitations
+  With no subject matter expert on hand, the sample groups for the statistical analysis were all split from the median. This was probably not the correct move since everything came back with a statistical significance.
+
+  In addition, this dataset treats all countries the same and social differences such as diets should be taken into account. 
+
+  ## Reccomendations
+    It is clear that if we want to increase the average life expectancy we need to lower adult mortality. More research needs to be done on adult mortality on it's own to discover the leading causes to mitigate that issue.
+
+   ## Conclusion
+   While this project gives us some glimpses into what effects life expectancy, more research needs to be done on these features on their own to come up with a clear path to a healthier human race. 
+
+   ## Next steps
+   If possible, we need to look at these findings in a more cultural context. Separating or marking the countries by region and continent to better see how culture impacts these numbers would be ideal. In addition, a seperate study into adult mortality is needed seeing as that is something effecting worldwide averages significanlty. 
+
+
 
   
   

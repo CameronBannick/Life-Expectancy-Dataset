@@ -111,7 +111,21 @@ The relationship between under 5 deaths and life expectancy is very weak as you 
 
   The two strongest factors given in regards to life expectany are schooling and adult mortality. However, I am not sure if schooling is directly assosciated with life expectancy. It could also be possible with more schooling avaliable means more public works meaning higher standards of santitation which could also be contributing. However, with adult mortaility, it does appear there are enough young deaths that are effecting the average life expectancy. 
 
-  As far as moderate relationships, we have BMI, GDP, and the polio vaccine
+  As far as moderate relationships, we have BMI, GDP, and the polio vaccine, however these three can also be connected. Notice earlier how higher BMI's were associated with higher life expectancy. Higher BMI could also mean higher access to food and doctors (polio vaccine).
+
+  ## Limitations
+  With no subject matter expert on hand, the sample groups for the statistical analysis were all split from the median. This was probably not the correct move since everything came back with a statistical significance.
+
+  In addition, this dataset treats all countries the same and social differences such as diets should be taken into account. 
+
+  ## Reccomendations
+    It is clear that if we want to increase the average life expectancy we need to lower adult mortality. More research needs to be done on adult mortality on it's own to discover the leading causes to mitigate that issue.
+
+   ## Conclusion
+   While this project gives us some glimpses into what effects life expectancy, more research needs to be done on these features on their own to come up with a clear path to a healthier human race. 
+
+   ## Next steps
+   If possible, we need to look at these findings in a more cultural context. Separating or marking the countries by region and continent to better see how culture impacts these numbers would be ideal. In addition, a seperate study into adult mortality is needed seeing as that is something effecting worldwide averages significanlty. 
 
 
 

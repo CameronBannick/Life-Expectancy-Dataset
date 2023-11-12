@@ -93,6 +93,10 @@ The relationship between under 5 deaths and life expectancy is very weak as you 
 
    FOr the chart above, we filtered all countries with a life expectancy under 65 and see if their was a relationship between that and percentage spent on healthcare. As shown, there doesn't appear to be a strong relationship with a CC of 1%.
 
+  ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/Life%20expectancy%20over%20alcohol%20consumption%20(in%20liters).png?)
+
+  Alcohol has a weak relationship to life expectancy with only a 39% correlation
+
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20years%20in%20school.png)
    
    Schooling appears to have a very strong relationship to life expectancy. You can clearly see on the graph about more schooling means a higher life expectancy, the cc calculatede was 70%.

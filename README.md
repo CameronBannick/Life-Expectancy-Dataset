@@ -1,6 +1,6 @@
 # Life Expectancy Report
  ## Introduction
-    As the human era continues advancements in medicine keep improving the quality of life for countries around the world. In the pursuit to ensure these advancements are made available to everyone, the question then becomes what factors contribute most to the life expectancy in the modern era. The goal of this project were to see which features in our data had the strongest relationship with life expectancy. 
+    As the human era continues advancements in medicine keep improving the quality of life for countries around the world. In the pursuit to ensure these advancements are made available to everyone, the question then becomes what factors contribute most to the life expectancy in the modern era. The goal of this project was to see which features in our data had the strongest relationship with life expectancy. 
  ## The data
 The data used was provided by the WHO and contains data on the following features:
    - Country -
@@ -31,11 +31,11 @@ The data used was provided by the WHO and contains data on the following feature
  ## Exploratory data analysis findings
    ### Trends over time
 
-   On average, bmi has only gone up between 2000 and 2015.
+   On average, BMI has only gone up between 2000 and 2015.
   
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Average%20BMI.png)
 
-   On average, there was a period of time where alcohol consumption was decreasing, but starts increase towards the middle of the decade.
+   On average, there was a period where alcohol consumption was decreasing but starts increase towards the middle of the decade.
   
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Avergage%20alcohol%20consumption%20in%20liters.png)
 
@@ -57,7 +57,7 @@ The data used was provided by the WHO and contains data on the following feature
 
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20BMI.png)
    
-   BMI has a moderately strong realtionship with life expectancy as seen above, the higher the BMI the higher the life expectancy. This appears to be a little counter intuitive because you'd expect a negative relationship with a lower BMI making a higher life expectancy. When calculating the correlation coefficient (which you can think of as "percent correlated") we get .56, so just a little over 50% correlated. 
+   BMI has a moderately strong relationship with life expectancy as seen above, the higher the BMI the higher the life expectancy. This appears to be a little counter intuitive because you'd expect a negative relationship with a lower BMI making a higher life expectancy. When calculating the correlation coefficient (which you can think of as "percent correlated") we get .56, so just a little over 50% correlated.
    
  ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20GDP.png).  
 
@@ -65,17 +65,16 @@ The data used was provided by the WHO and contains data on the following feature
    
   ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Hepatitis%20B%20Vaccine%20%25.png)  
 
-   The hepatitis-b vaccine appears to have a weak relationship with life expectancy. All of the data points far from the redline appear to "outliers", 
-   meaning they are not representative to the rest of the population. The CC came out to 20%.
+   The hepatitis-b vaccine appears to have a weak relationship with life expectancy. All the data points far from the redline appear to be outliers, meaning they are not representative to the rest of the population. The CC came out to 20%.
 
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20Polio%20vaccine%20%25.png)
 
-   However, the polio vaccine seems to have a "positive/moderate to strong relationship" meaning the more people are vaccinated the larger the life expectancy. The CC calculated was 46%
+ However, the polio vaccine seems to have a "positive/moderate to strong relationship" meaning the more people are vaccinated the larger the life expectancy. The CC calculated was 46%
    
    
    ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20adult%20mortatilty.png)
 
-   It appears adult mortality (15-60) has a strong negative relationship, meaning the more cases of adult mortality results in a lower life expectancy. The CC calculated was 70% in the negative direction. 
+   It appears adult mortality (15-60) has a strong negative relationship, meaning the more cases of adult mortality results in a lower life expectancy. The CC calculated was 70% in the negative direction.
    
 ![image](https://github.com/CameronBannick/Life-Expectancy-Dataset/blob/main/data_visuals/Life%20expectancy%20over%20deaths%20under%20age%205.png)
 
